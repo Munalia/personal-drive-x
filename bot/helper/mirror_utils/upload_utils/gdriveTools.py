@@ -206,7 +206,7 @@ class GoogleDriveHelper:
         finally:
             return msg
 
-    def upload(self, link: str, file_name: str, file: str):
+    def upload(self, file_name: str):
         if USE_SERVICE_ACCOUNTS:
             self.service_account_count = len(os.listdir("accounts"))
         self.__listener.onUploadStarted()
